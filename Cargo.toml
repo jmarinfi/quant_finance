@@ -1,0 +1,9 @@
+[package]
+name = "quant_finance"
+version = "0.1.0"
+edition = "2024"
+description = "Fórmulas y algoritmos de finanzas cuantitativas inspirados en el libro 'Quantitative Finance' de X. Y. Wang"
+readme = "README.md"
+# license = "MIT OR Apache-2.0" # Se definirá antes de publicar
+
+[dependencies]
