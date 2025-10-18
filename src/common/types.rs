@@ -37,3 +37,15 @@ impl std::error::Error for FinanceError {}
 
 /// Tipo de resultado para operaciones financieras
 pub type FinanceResult<T> = Result<T, FinanceError>;
+
+/// Representa el número de veces que se capitaliza por período
+pub type CompoundingFrequency = u32;
+
+/// Representa el tiempo en años (puede ser fraccionario)
+pub type TimeInYears = f64;
+
+/// Representa el principal o capital inicial
+pub type Principal = f64;
+
+/// Representa el interés ganado
+pub type Interest = f64;
