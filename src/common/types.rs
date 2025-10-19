@@ -49,3 +49,24 @@ pub type Principal = f64;
 
 /// Representa el interés ganado
 pub type Interest = f64;
+
+// ==== TIPOS PARA OPCIONES ====
+
+/// Precio del activo subyacente (S0)
+pub type SpotPrice = f64;
+
+/// Precio de ejercicio (K)
+pub type StrikePrice = f64;
+
+/// Tiempo hasta vencimiento en años (T)
+pub type TimeToMaturity = f64;
+
+/// Volatilidad anualizada (σ)
+pub type Volatility = f64;
+
+/// Tipo de opción europea
+#[derive(Debug, Clone, Copy, PartialEq)]
+pub enum OptionType {
+    Call,
+    Put,
+}
