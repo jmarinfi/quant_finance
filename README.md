@@ -6,7 +6,6 @@ Este crate aspira a ser una colección clara, testeada y bien documentada de her
 
 Estado: inicial (scaffolding). Se añadirán módulos y funciones de forma incremental, junto con documentación y tests.
 
-
 ## Instalación
 
 Aún no publicado en crates.io. Por ahora puedes:
@@ -28,7 +27,6 @@ quant_finance = "0.1"
 
 > Nota: actualiza la versión según corresponda.
 
-
 ## Uso rápido
 
 Ejemplo mínimo con la API actual (de momento solo hay funciones de ejemplo mientras se construye la biblioteca):
@@ -42,7 +40,6 @@ fn main() {
 ```
 
 A medida que se incorporen módulos nuevos, este apartado mostrará ejemplos prácticos por tema (estadística, renta fija, opciones, etc.).
-
 
 ## Alcance previsto (roadmap)
 
@@ -58,10 +55,10 @@ La estructura exacta puede variar, pero se prevé algo como:
 - num: herramientas numéricas (interpolación, integración, optimización).
 
 Cada módulo incluirá:
+
 - Documentación con fórmulas y referencias.
 - Tests unitarios y, cuando tenga sentido, tests estocásticos basados en propiedades.
 - Ejemplos reproducibles.
-
 
 ## Filosofía de diseño
 
@@ -69,7 +66,6 @@ Cada módulo incluirá:
 - Claridad didáctica: priorizar legibilidad y referencias sobre micro-optimizaciones prematuras.
 - Trazabilidad: enlazar fórmulas y resultados con su origen (capítulo/sección del libro u otras fuentes abiertas).
 - Reproducibilidad: fijar semillas y detallar supuestos cuando se use aleatoriedad.
-
 
 ## Desarrollo
 
@@ -98,7 +94,6 @@ cargo fmt
 cargo clippy -- -D warnings
 ```
 
-
 ## Contribuir
 
 Toda contribución es bienvenida. Recomendaciones:
@@ -107,14 +102,11 @@ Toda contribución es bienvenida. Recomendaciones:
 2. Acompaña cada PR con tests, referencias y notas sobre supuestos.
 3. Mantén las APIs pequeñas y bien tipadas; documenta entradas/salidas y unidades.
 
-
 ## Licencia
 
 Por definir. Antes de publicar, se añadirá un archivo de licencia (p. ej., MIT/Apache-2.0). Este proyecto no distribuye contenido con copyright del libro; únicamente implementa fórmulas y algoritmos a partir de referencias académicas y apuntes propios.
-
 
 ## Referencias
 
 - X. Y. Wang, "Quantitative Finance" (referencia principal de alcance y organización del contenido).
 - Notas de curso y artículos abiertos que se citarán en cada módulo cuando corresponda.
-
