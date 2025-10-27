@@ -70,3 +70,20 @@ pub enum OptionType {
     Call,
     Put,
 }
+
+// === TIPOS PARA TEORÍA DE PORTFOLIOS ===
+
+/// Rentabilidad esperada de una inversión
+pub type ExpectedReturn = f64;
+
+/// Tasa libre de riesgo (Rf)
+pub type RiskFreeRate = f64;
+
+/// Beta de una inversión (β) - Sensibilidad al riesgo de mercado
+pub type Beta = f64;
+
+/// Prima de riesgo de mercado (RM - Rf)
+pub type MarketRiskPremium = f64;
+
+/// Rentabilidad esperada del mercado (RM)
+pub type MarketReturn = f64;

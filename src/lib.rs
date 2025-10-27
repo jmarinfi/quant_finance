@@ -3,6 +3,7 @@
 pub mod common;
 pub mod time_value;
 pub mod options;
+pub mod portfolio;
 
 // Re-exportar los tipos más comunes
 pub use common::{FinanceError, FinanceResult, OptionType};
@@ -17,6 +18,11 @@ pub use time_value::{
 // Re-exportar funciones principales de options
 pub use options::{
     call_price, put_price, option_price, d1_d2
+};
+
+// Re-exportar funciones principales de portfolio
+pub use portfolio::{
+    expected_return, market_risk_premium, capm_alpha
 };
 
 
@@ -84,5 +90,21 @@ mod tests {
         
         assert_eq!(call_direct, call_dispatch);
         assert_eq!(put_direct, put_dispatch);
+    }
+
+    #[test]
+    fn integration_test_capm_portfolio() {
+        // Caso típico: acción con beta 1.2, rf=3%, prima mercado=7%
+        let rf = 0.03;
+        let beta = 1.2;
+        let market_premium = 0.07;
+
+        let expected = expected_return(rf, beta, market_premium).unwrap();
+        assert!((expected - 0.114).abs() < 1e-10);
+
+        // Test alpha con rendimiento real del 13%
+        let actual = 0.13;
+        let alpha = capm_alpha(actual, expected).unwrap();
+        assert!((alpha - 0.016).abs() < 1e-10);
     }
 }
