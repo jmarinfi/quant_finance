@@ -12,7 +12,8 @@ pub use common::{FinanceError, FinanceResult, OptionType};
 pub use time_value::{
     future_value, present_value,
     simple_interest, simple_interest_amount,
-    compound_amount, compound_interest, continuous_compound_amount
+    compound_amount, compound_interest, continuous_compound_amount,
+    Bond, bond_price, macaulay_duration, bond_convexity
 };
 
 // Re-exportar funciones principales de options

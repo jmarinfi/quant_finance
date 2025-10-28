@@ -20,6 +20,8 @@ pub enum FinanceError {
     InvalidMonetaryValue,
     /// División por cero en cálculos
     DivisionByZero,
+    /// Valor inválido
+    InvalidInput,
 }
 
 impl std::fmt::Display for FinanceError {
@@ -29,6 +31,7 @@ impl std::fmt::Display for FinanceError {
             FinanceError::InvalidPeriods => write!(f, "Número de períodos inválido"),
             FinanceError::InvalidMonetaryValue => write!(f, "Valor monetario inválido"),
             FinanceError::DivisionByZero => write!(f, "División por cero en cálculo financiero"),
+            FinanceError::InvalidInput => write!(f, "Valor inválido"),
         }
     }
 }

@@ -6,6 +6,7 @@
 pub mod basic;
 pub mod simple;
 pub mod compound;
+mod bonds;
 
 // Re-exportar funciones principales
 pub use basic::{future_value, present_value};
@@ -16,4 +17,8 @@ pub use simple::{
 pub use compound::{
     compound_amount, compound_interest, compound_principal,
     continuous_compound_amount, effective_annual_rate
+};
+pub use bonds::{
+    Bond, BondCashFlow, bond_price, macaulay_duration,
+    bond_convexity, convexity_adjustment, modified_duration
 };
